@@ -1,0 +1,83 @@
+body
+  font-family apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, PingFang SC, Microsoft YaHei, sans-serif
+  font-size 14px
+  font-weight 400
+  margin 0
+  overflow-y scroll
+  color #42505a
+  background-color #fff
+  &:before
+    z-index 5
+    content ''
+    position absolute
+    top 0
+    width 100%
+    height 2px
+    background #3f4d56
+
+.header
+  text-align center
+  margin 0 auto
+  max-width 640px
+  padding 0 20px
+  .avatar
+    display inline-block
+    text-decoration none
+    cursor pointer
+    img
+      padding 4px
+      border 1px solid #eaeaea
+      display inline-block
+      width 100px
+      height 100px
+      margin 70px auto 0
+      border-radius 50%
+  .username
+    font-size 26px
+    margin-top 20px
+    font-weight 600
+  .bio
+    color #5e656b
+    font-size 16px
+    line-height 1.4
+    margin 14px 20px 0
+  .social
+    &:after
+        display block
+        margin 0 auto
+        width 50%
+        content ''
+        height 1px
+        background #f1f1f1
+    a
+      display inline-block
+      margin 20px 12px 30px
+      text-decoration none
+      i
+        display block
+        font-size 22px
+        color #565b65
+        &:hover
+          color #363a42
+
+.view
+  max-width 800px
+  margin 20px auto 50px auto
+  position relative
+
+.fade-enter-active, .fade-leave-active
+  transition all .2s ease
+
+.fade-enter, .fade-leave-active
+  opacity 0
+
+
+@media (max-width 860px)
+  .header
+    .bio
+      font-size 14px
+
+@media (max-width 600px)
+  .header
+    .bio
+      font-size 14px

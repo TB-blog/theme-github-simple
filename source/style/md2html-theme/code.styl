@@ -1,0 +1,78 @@
+@require './config'
+
+.content
+  font-weight normal
+  code
+    padding 0
+    padding-top 0.2em
+    padding-bottom 0.2em
+    margin 0
+    font-size 85%
+    background-color #f6f8fa
+    border-radius 3px
+
+.content
+  pre, pre[class*="language-"]
+    border-radius 6px
+    padding 16px
+    overflow auto
+    font-size 85%
+    line-height 1.45
+    background-color #f6f8fa
+    border-radius 3px
+  .highlighted-line
+    background-color rgba(0, 0, 0, 66%)
+    display block
+    margin 0.1rem -1.5rem 0
+    padding 0.1rem 1.5rem
+
+pre[class="language-js"], pre[class="language-javascript"]
+  &:before
+    content "js"
+
+pre[class="language-html"], pre[class="language-markup"]
+  &:before
+    content "html"
+
+pre[class="language-markdown"], pre[class="language-md"]
+  &:before
+    content "md"
+
+pre[class="language-vue"]:before
+  content "vue"
+
+pre[class="language-css"]:before
+  content "css"
+
+pre[class="language-sass"]:before
+  content "sass"
+
+pre[class="language-less"]:before
+  content "less"
+
+pre[class="language-scss"]:before
+  content "scss"
+
+pre[class="language-stylus"]:before
+  content "stylus"
+
+pre[class="language-json"]:before
+  content "json"
+
+pre[class="language-ruby"]:before
+  content "rb"
+
+pre[class="language-python"]:before
+  content "py"
+
+pre[class="language-go"]:before
+  content "go"
+
+pre[class="language-java"]:before
+  content "java"
+
+pre[class="language-c"]:before
+  content "c"
+
+pre[class="language-bash"]:before
+  content "sh"

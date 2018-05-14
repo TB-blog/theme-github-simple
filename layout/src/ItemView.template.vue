@@ -1,0 +1,46 @@
+<style lang="stylus">
+@import '../../source/style/ItemView.styl';
+</style>
+
+<template>
+  <div class="item-view" v-if="item">
+    <template v-if="item">
+      <div class="item-view-header">
+        <div class="back">
+          <i @click="back" class="iconfont icon-back"></i>
+        </div>
+        <h1>{{ item.title }}</h1>
+        <p class="meta">
+          Post By
+          <a :href="`https://github.com/${this.$_config.user}`" target="_blank" rel="noopener">
+            {{this.$_config.nickname}}
+          </a>
+          {{ item.created_at | timeAgo }}
+        </p>
+      </div>
+      <div v-if="item.body" class="content" v-html="htmlResource" v-highlight></div>
+      <div class="item-view-footer">
+        <span v-if="item.labels" class="labels" v-for="label in item.labels" :key="label.id">
+          <a :href="labelUrl + label.name"
+            target="_blank"
+            rel="noopener">#{{ label.name }}</a>
+        </span>
+        <p class="meta">
+          Updated {{ item.updated_at | timeAgo }}
+        </p>
+      </div>
+      <div v-if="this.$_config.gitalk.useGitalk" id="item-view-comments"></div>
+    </template>
+  </div>
+</template>
+
+<script>
+import 'highlight.js/styles/github.css';
+export default {
+  methods: {
+    back () {
+      this.$router.go(-1);
+    }
+  }
+}
+</script>

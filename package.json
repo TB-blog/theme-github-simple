@@ -1,0 +1,27 @@
+{
+  "name": "theme-geek-dark",
+  "version": "1.0.0",
+  "description": "TB official theme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TB-blog/theme-geek-dark.git"
+  },
+  "keywords": [
+    "TB",
+    "theme-geek-dark"
+  ],
+  "author": "Trevor <xizhouh@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TB-blog/theme-geek-dark/issues"
+  },
+  "homepage": "https://github.com/TB-blog/theme-geek-dark#readme",
+  "devDependencies": {
+    "cz-conventional-changelog": "^2.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

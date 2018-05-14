@@ -1,0 +1,115 @@
+@require './md2html-theme/theme.styl'
+
+.item-view-header, .item-view-footer
+  padding 2.8em 2em 1em
+  a
+    text-decoration none
+  .back
+    margin .3em 0 2em 0
+    cursor pointer
+    display inline-block
+    .iconfont
+      color #788590
+      font-size 36px
+      &:hover
+        color #42505a
+  h1
+    font-size 24px
+    margin 0
+    margin-right .5em
+    color #3d4348
+  .labels, .meta, .meta a
+    color #788590
+  .meta
+    a
+      color #565f67
+  .labels
+    padding-right .4em
+    line-height 2em
+    a
+      color #788590
+      text-decoration underline
+
+.content
+  padding 0 2em
+  border 0
+  &:before
+    content ''
+    width 30px
+    display: block
+    margin-bottom 20px
+    height 1px
+    background #eee
+  img
+    max-width 100%
+
+#item-view-comments
+  padding 0 2em 1em
+
+.gt-container
+  font-weight 300
+  .gt-comment-content
+    padding 0 1em 2em 1em
+  .gt-link
+    border-bottom 0
+  .gt-meta
+    border-bottom 0
+  .gt-svg
+    svg
+      fill #42505a
+  .gt-ico-arrdown
+    .gt-svg
+      display none
+  .gt-comment-like
+    svg
+      fill #d480aa
+  .gt-ico-edit
+    svg
+      fill #aaa
+  .gt-header-textarea
+    background-color hsla(0,0%,100%,.1)
+    color #ddd
+  .gt-header-textarea:hover
+    background-color hsla(0,0%,100%,.1)
+  .gt-ico-text, .gt-comments-null, .gt-user-inner, .gt-action
+    color #788590
+  .gt-comments-null
+    font-size 14px
+    font-weight 400
+  .gt-user-inner
+    font-weight 400
+  .gt-popup
+    margin-top 10px
+    background-color #1d1f21
+    border 1px solid #666
+    border-radius 4px
+  .gt-action:hover, .gt-link-project:hover
+    color #42505a
+  .gt-copyright
+    border-top 1px solid #788590
+  .gt-btn, .gt-btn:hover
+    background-color #42505a
+  .gt-comment-admin
+    .gt-comment-content
+      background-color hsla(0,0%,100%,.1)
+      border-radius 4px
+    .gt-comment-content:hover
+      box-shadow: 0 0 0 0
+  .gt-comment-body
+    color #42505a !important
+  .gt-comment-username, .gt-comment-username:hover
+    color #aaa
+  a, a.is--active, a.is--active:hover, a:hover
+    color #42505a
+
+@media (max-width 600px)
+  .item-view-header
+    padding 1.2em 2em 1em
+    .back
+      margin 0 0 1em 0
+      .iconfont
+        font-size 32px
+    h1
+      font-size 1.25em
+  .gt-comment-text, .gt-comment-date
+    display none
