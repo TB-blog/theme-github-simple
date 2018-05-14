@@ -1,3 +1,7 @@
+<style lang="stylus">
+@import '../../source/style/ItemList.styl';
+</style>
+
 <template>
   <div class="list-view" :class="{ 'repos-view': type === 'repo' }">
     <div v-if="type === 'blog'" class="list-nav">

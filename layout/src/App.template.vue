@@ -1,3 +1,7 @@
+<style lang="stylus">
+@import '../../source/style/App.styl';
+</style>
+
 <template>
   <div id="app">
     <header v-if="!this.$route.fullPath.match('item')" class="header">

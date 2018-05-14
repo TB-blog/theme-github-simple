@@ -1,3 +1,7 @@
+<style lang="stylus">
+@import '../../source/style/ErrorView.styl';
+</style>
+
 <template>
   <div class="error-view">
     <h1>{{ code }}</h1>
