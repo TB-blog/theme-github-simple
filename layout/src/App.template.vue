@@ -17,10 +17,10 @@
         <router-link to="/repo">
           <i class="iconfont icon-github"></i>
         </router-link>
-        <a :href="this.$store.state.user.blog" target="_blank" rel="noopener">
+        <a v-if="this.$store.state.user.blog" :href="this.$store.state.user.blog" target="_blank" rel="noopener">
           <i class="iconfont icon-home"></i>
         </a>
-        <a :href="`mailto:${this.$store.state.user.email}`">
+        <a v-if="this.$store.state.user.email" :href="`mailto:${this.$store.state.user.email}`">
           <i class="iconfont icon-email"></i>
         </a>
       </div>
