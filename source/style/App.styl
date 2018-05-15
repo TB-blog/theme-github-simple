@@ -43,16 +43,21 @@ body
     margin 14px 20px 0
   .social
     &:after
-        display block
-        margin 0 auto
-        width 50%
-        content ''
-        height 1px
-        background #f1f1f1
+      display block
+      margin 0 auto
+      width 50%
+      content ''
+      height 1px
+      background #f1f1f1
     a
       display inline-block
       margin 20px 12px 30px
       text-decoration none
+      &.router-link-active
+        color #fff
+        font-weight 400
+        i
+          color #363a42
       i
         display block
         font-size 22px

@@ -6,9 +6,6 @@
   <div class="item-view" v-if="item">
     <template v-if="item">
       <div class="item-view-header">
-        <div class="back">
-          <i @click="back" class="iconfont icon-back"></i>
-        </div>
         <h1>{{ item.title }}</h1>
         <p class="meta">
           Post By

@@ -4,12 +4,15 @@
 
 <template>
   <div id="app">
-    <header v-if="!this.$route.fullPath.match(/item|error/)" class="header">
-      <a class="avatar" :href="this.$store.state.user.html_url" target="_blank" rel="noopener">
-        <img :src="this.$store.state.user.avatar_url" alt="avatar">
+    <header v-if="!this.$route.fullPath.match(/error/)" class="header">
+      <a class="avatar"
+        :href="user.html_url"
+        target="_blank"
+        rel="noopener">
+        <img :src="user.avatar_url" alt="avatar">
       </a>
-      <h1 class="username">{{ this.$store.state.user.name }}</h1>
-      <p class="bio">{{ this.$store.state.user.bio }}</p>
+      <h1 class="username">{{ user.name }}</h1>
+      <p class="bio">{{ user.bio }}</p>
       <div class="social">
         <router-link to="/blog">
           <i class="iconfont icon-blog"></i>
@@ -17,10 +20,14 @@
         <router-link to="/repo">
           <i class="iconfont icon-github"></i>
         </router-link>
-        <a v-if="this.$store.state.user.blog" :href="this.$store.state.user.blog" target="_blank" rel="noopener">
+        <a v-if="user.blog"
+          :href="user.blog"
+          target="_blank"
+          rel="noopener">
           <i class="iconfont icon-home"></i>
         </a>
-        <a v-if="this.$store.state.user.email" :href="`mailto:${this.$store.state.user.email}`">
+        <a v-if="user.email"
+          :href="`mailto:${user.email}`">
           <i class="iconfont icon-email"></i>
         </a>
       </div>
@@ -30,3 +37,15 @@
     </transition>
   </div>
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      user: this.$store.state.user
+            || this.$store.state.issues[0].user
+            || this.$store.state.singleIssue.user
+    };
+  }
+}
+</script>
