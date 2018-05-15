@@ -4,7 +4,7 @@
 
 <template>
   <div id="app">
-    <header v-if="!this.$route.fullPath.match('item')" class="header">
+    <header v-if="!this.$route.fullPath.match(/item|error/)" class="header">
       <a class="avatar" :href="this.$store.state.user.html_url" target="_blank" rel="noopener">
         <img :src="this.$store.state.user.avatar_url" alt="avatar">
       </a>
