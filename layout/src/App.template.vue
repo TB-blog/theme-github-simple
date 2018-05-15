@@ -40,12 +40,10 @@
 
 <script>
 export default {
-  data () {
-    return {
-      user: this.$store.state.user
-            || this.$store.state.issues[0].user
-            || this.$store.state.singleIssue.user
-    };
+  computed: {
+    user () {
+      return this.$store.getters.user
+    }
   }
 }
 </script>

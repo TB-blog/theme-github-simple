@@ -3,8 +3,10 @@
 </style>
 
 <template>
-  <li class="blogs-item" :class="{ 'list-item-left': type === 'blog' }">
-    <div class="post" @click="goToItem(type, item)">
+  <li class="blogs-item"
+    :class="{ 'list-item-left': type === 'blog' }"
+    @click="goToItem(type, item)">
+    <div class="post">
       <span class="score">{{ item.stargazers_count }}</span>
       <span class="title">
         <template v-if="type === 'blog'">
